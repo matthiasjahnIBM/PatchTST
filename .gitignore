@@ -175,8 +175,13 @@ ipython_config.py
 .LSOverride
 
 # Icon must end with two \r
+<<<<<<< HEAD
 Icon
 
+=======
+Icon
+
+>>>>>>> 204c21efe0b39603ad6e2ca640ef5896646ab1a9
 
 # Thumbnails
 ._*
