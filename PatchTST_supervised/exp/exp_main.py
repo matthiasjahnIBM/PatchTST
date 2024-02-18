@@ -284,13 +284,20 @@ class Exp_Main(Exp_Basic):
         if self.args.test_flop:
             test_params_flop((batch_x.shape[1],batch_x.shape[2]))
             exit()
+
         preds = np.array(preds)
         trues = np.array(trues)
         inputx = np.array(inputx)
+        print('preds shape after np.array(): ' + preds.shape, 'trues shape after np.array(): ' + trues.shape)
+
 
         preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
         trues = trues.reshape(-1, trues.shape[-2], trues.shape[-1])
         inputx = inputx.reshape(-1, inputx.shape[-2], inputx.shape[-1])
+
+        print('preds shape after reshape(): ' + preds.shape, 'trues shape after reshape(): ' + trues.shape)
+
+
 
         # result save
         folder_path = './results/' + setting + '/'
@@ -305,6 +312,14 @@ class Exp_Main(Exp_Basic):
         f.write('\n')
         f.write('\n')
         f.close()
+
+        if test:
+            preds = preds.reshape(preds.shape[0], preds.shape[1])
+            trues = trues.reshape(preds.shape[0], preds.shape[1])
+
+            preds = test_data.inverse_transform(preds)
+            trues = test_data.inverse_transform(trues)
+
 
         #np.save(folder_path + 'metrics.npy', np.array([mae, mse, rmse, mape, mspe,rse, corr]))
         np.save(folder_path + 'pred.npy', preds)
