@@ -1,0 +1,2 @@
+1440_15_PatchTST_custom_ftMS_sl1440_ll48_pl15_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.12121835350990295, mae:0.18158207833766937, rse:0.5146186947822571
