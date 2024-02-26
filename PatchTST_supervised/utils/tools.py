@@ -108,6 +108,7 @@ def test_params_flop(model,x_shape):
         model_params += parameter.numel()
         print('INFO: Trainable parameter count: {:.2f}M'.format(model_params / 1000000.0))
     from ptflops import get_model_complexity_info    
+   
     with torch.cuda.device(0):
         macs, params = get_model_complexity_info(model.cuda(), x_shape, as_strings=True, print_per_layer_stat=True)
         # print('Flops:' + flops)

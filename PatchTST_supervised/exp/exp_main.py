@@ -282,7 +282,7 @@ class Exp_Main(Exp_Basic):
                     #visual(gt, pd, os.path.join(folder_path, str(i) + '.pdf'))
 
         if self.args.test_flop:
-            test_params_flop((batch_x.shape[1],batch_x.shape[2]))
+            test_params_flop(self.model, (batch_x.shape[1],batch_x.shape[2]))
             exit()
         preds = np.array(preds)
         trues = np.array(trues)
