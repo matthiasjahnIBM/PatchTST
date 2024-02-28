@@ -1,6 +1,9 @@
 720_1_PatchTST_custom_ftMS_sl720_ll48_pl1_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
 mse:0.04301968216896057, mae:0.0988997220993042, rse:0.30657362937927246
 
+720_3_PatchTST_custom_ftMS_sl720_ll48_pl3_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.06920044869184494, mae:0.12874343991279602, rse:0.3888258635997772
+
 720_15_PatchTST_custom_ftMS_sl720_ll48_pl15_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
 mse:0.12542696297168732, mae:0.18414217233657837, rse:0.5234760642051697
 

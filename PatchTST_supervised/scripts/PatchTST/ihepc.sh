@@ -5,7 +5,7 @@ fi
 if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
-seq_len=1440
+seq_len=336
 model_name=PatchTST
 
 root_path_name=./dataset/
@@ -14,7 +14,7 @@ model_id_name=IHEPC
 data_name=custom
 
 random_seed=2021
-for pred_len in 1 
+for pred_len in 3 
 do
     python -u run_longExp.py \
       --random_seed $random_seed \
@@ -39,8 +39,8 @@ do
       --patch_len 16\
       --stride 8\
       --des 'Exp' \
-      --train_epochs 15\
-      --patience 5\
+      --train_epochs 100\
+      --patience 10\
       --lradj 'TST'\
       --pct_start 0.2\
       --itr 1 --batch_size 32 --learning_rate 0.0001 >logs/LongForecasting/$model_name'_'$model_id_name'_'$seq_len'_'$pred_len.log 

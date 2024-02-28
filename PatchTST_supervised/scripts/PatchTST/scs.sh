@@ -14,7 +14,7 @@ model_id_name=SCS
 data_name=custom
 
 random_seed=2021
-for pred_len in 3 5 12 24  
+for pred_len in 48 168 
 do
     python -u run_longExp.py \
       --random_seed $random_seed \
