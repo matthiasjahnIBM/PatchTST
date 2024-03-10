@@ -9,8 +9,8 @@ seq_len=336
 model_name=PatchTST
 
 root_path_name=./dataset/
-data_path_name=df_S1.csv
-model_id_name=SLGT_df_S1
+data_path_name=df_S3.csv
+model_id_name=SLGT_df_S3
 data_name=custom
 
 random_seed=2021
